@@ -9,7 +9,13 @@ set autoindent
 set smartindent
 set nowrap
 set clipboard=unnamedplus
-//intall vim-gtk o vim-gnome
+"intall vim-gtk o vim-gnome
+"for windows
+"augroup WSLYank
+"    autocmd!
+"    autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+"    augroup END
+"endif
 nnoremap<F1> :!./%:r.out < in1 <CR>
 nnoremap<F2> :!./%:r.out < in2 <CR>
 nnoremap<F3> :!./%:r.out < in3 <CR>
